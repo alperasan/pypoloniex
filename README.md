@@ -6,6 +6,10 @@
 [![GitHub Issues](https://img.shields.io/github/issues/Crypto-AI/Pypoloniex.svg)](https://github.com/Crypto-AI/pypoloniex/issues)
 [![License](https://img.shields.io/badge/license-MIT%20License-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
+## Install from sources (for this fork)
+```python
+pip install -e .
+```
 
 ## Install
 ```python
