@@ -1,0 +1,7 @@
+pypoloniex/LoadPairs.py
+pypoloniex/TimeSeries.py
+pypoloniex/__init__.py
+pypoloniex.egg-info/PKG-INFO
+pypoloniex.egg-info/SOURCES.txt
+pypoloniex.egg-info/dependency_links.txt
+pypoloniex.egg-info/top_level.txt

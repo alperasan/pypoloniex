@@ -2,39 +2,39 @@ import requests
 
 class Coin(object):
 
-	def __init__(self, 
-		     id            = "", 
+	def __init__(self,
+		     id            = "",
 		     coin          = "",
 		     market        = "",
-		     lowestAsk     = "", 
-		     low24hr       = "", 
-		     highestBid    = "", 
-		     high24hr      = "", 
+		     lowestAsk     = "",
+		     low24hr       = "",
+		     highestBid    = "",
+		     high24hr      = "",
 		     last          = "",
-		     percentChange = "", 
-		     baseVolume    = "", 
-		     quoteVolume   = "", 
+		     percentChange = "",
+		     baseVolume    = "",
+		     quoteVolume   = "",
 		     isFrozen      = ""):
-		
+
 		self.id            = id
 		self.coin          = coin
-		self.market        = market		
+		self.market        = market
 		self.lowestAsk     = lowestAsk
 		self.low24hr       = low24hr
 		self.highestBid    = highestBid
 		self.high24hr      = high24hr
 		self.last          = last
 		self.percentChange = percentChange
-		self.baseVolume    = baseVolume		
+		self.baseVolume    = baseVolume
 		self.quoteVolume   = quoteVolume
 		self.isFrozen      = isFrozen
 
 	def __repr__(self):
 		return "Coin"
-	
+
 	def __str__(self):
 		s = len(self.coin)+7
-		output =  "Coin: %s | Last Price: %s %s"  % (self.coin, self.last, self.market.lower())		
+		output =  "Coin: %s | Last Price: %s %s"  % (self.coin, self.last, self.market.lower())
 		output += "\n%s| Percent Change: %f%% %s" % (' '*s, float(self.percentChange)*100, self.market.lower())
 		output += "\n%s| ---"                     % (' '*s)
 		output += "\n%s| Low 24hr: %s %s"         % (' '*s, self.low24hr, self.market.lower())
@@ -66,11 +66,11 @@ class LoadPairs(object):
 
 		coin, market = coin.upper(), market.upper()
 		pair = (market, coin)
-		
-		try: 
+
+		try:
 			info = self.pairs[pair]
 		except:
-			print "KeyError: Couldn't find %s on the %s market" % (coin, market)
+			print("KeyError: Couldn't find %s on the %s market" % (coin, market))
 			return
 
 		return Coin(info['id'],

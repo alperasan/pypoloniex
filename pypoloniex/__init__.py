@@ -1,2 +1,2 @@
-from LoadPairs import LoadPairs
-from TimeSeries import TimeSeries
+from .LoadPairs import LoadPairs
+from .TimeSeries import TimeSeries
